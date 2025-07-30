@@ -1,0 +1,188 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #800080, #a64ca6);
+
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== SHARED CONTAINER STYLE ===== */
+#start-page{
+    background-color:transparent;
+    width: 100vh;
+}
+#quiz-container,
+#result-page {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* ===== START PAGE ===== */
+img {
+  position: relative;
+  top: -70px; /* Move image 20px above */
+}
+
+#start-page h1 {
+  font-size: 2em;
+  margin-top: -110px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+#start-page p {
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: #fffefe;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  background-color: #d086eb;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  border: 2px solid rgb(255, 255, 255);
+}
+#welcome-message{
+    color: #460058;
+    margin-bottom: 20px;
+    margin-top: -25px;
+    text-shadow: 1px 1px 2px #410044;
+
+
+}
+#name {
+  border: 2px solid #410044;
+  padding: 0px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+label{
+color: white;
+
+}
+input#name {
+  width: 200px;
+  padding: 05px 0px;
+}
+
+button:hover {
+  background-color: #530079;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ===== QUIZ INTERFACE ===== */
+#timer, #score {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+#question {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+#options {
+    margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 20px;
+  
+}
+
+.option {
+    margin: 05px;
+  padding: 12px;
+  background-color: #bf97ff;
+  color: black;
+  border-radius: 6px;
+  gap: 0;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+
+.option:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.02);
+}
+
+/* Correct & Wrong Answer Styling */
+.correct {
+  background-color: #c8e6c9 !important;
+  border-color: #2e7d32 !important;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.wrong {
+  background-color: #ffcdd2 !important;
+  border-color: #c62828 !important;
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* ===== RESULT PAGE ===== */
+#result-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+#result-page p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  #start-page,
+  #quiz-container,
+  #result-page {
+    padding: 20px;
+  }
+
+  #question {
+    font-size: 1.1rem;
+  }
+
+  .option {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+}
